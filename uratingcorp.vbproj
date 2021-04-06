@@ -145,6 +145,7 @@
     <Content Include="Content\estilo.css" />
     <Content Include="fundo.jpg" />
     <Content Include="landingPage.aspx" />
+    <Content Include="HomePage.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="favicon.ico" />
@@ -216,6 +217,13 @@
     </Compile>
     <Compile Include="landingPage.aspx.vb">
       <DependentUpon>landingPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePage.aspx.designer.vb">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.aspx.vb">
+      <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Register.aspx.designer.vb">

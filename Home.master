@@ -1,4 +1,4 @@
-﻿<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="urating.SiteMaster" %>
+﻿<%@ Master Language="VB" %>
 
 <!DOCTYPE html>
 
@@ -17,7 +17,6 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
-
 <body>
     <form runat="server">
         <asp:ScriptManager runat="server">
@@ -42,9 +41,9 @@
 
         
         <div class="container body-content">
-            
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
+
             <hr />
             <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - Desenvolvido por Gustavo, Diego, Nicolas e Eduardo | Universidade Presbiteriana Mackenzie - FCI</p>

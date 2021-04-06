@@ -51,12 +51,12 @@
                             <tr>
                                 <td class="auto-style2">Usuário</td>
                                 <td>
-                                    <asp:TextBox ID="usuario" runat="server" ForeColor="Black" Width="250px" CssClass="auto-style4" ValidateRequestMode="Enabled"></asp:TextBox>
+                                    <asp:TextBox ID="username" runat="server" ForeColor="Black" Width="250px" CssClass="auto-style4" ValidateRequestMode="Enabled"></asp:TextBox>
                                 </td>
                             </tr>
                             
                             <tr>
-                                <td class="auto-style2">Senha</td>
+                                <td class="auto-style2">Senha
                                 <td>
                                     <asp:TextBox ID="senha" runat="server" ForeColor="Black" Width="250px" TextMode="Password" CssClass="auto-style4" ValidateRequestMode="Enabled"></asp:TextBox>
                                 </td>

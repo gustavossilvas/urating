@@ -10,6 +10,10 @@
 		width: 150px;
 
 	}
+	.casa{
+		width: 700px;
+
+	}
 
 	.centralizar{
 		align-content: center;
@@ -36,6 +40,8 @@
 				></a>
 				<br />
 				<br />
+
+				<img class="casa" src="casa.png" alt="" />
 
 			</div>
 		</header>

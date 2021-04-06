@@ -23,13 +23,13 @@ Partial Public Class _Login
     Protected WithEvents Image2 As Global.System.Web.UI.WebControls.Image
 
     '''<summary>
-    '''Controle usuario.
+    '''Controle username.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents usuario As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents username As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Controle senha.
