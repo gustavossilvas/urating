@@ -1,9 +1,10 @@
 ﻿Imports System.Data.SqlClient
-
+Imports System.Web.Security
 
 
 Public Class _Login
     Inherits Page
+
 
     Private da As SqlDataAdapter
 
@@ -18,7 +19,7 @@ Public Class _Login
 
     End Sub
 
-    Public Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Public Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
 
 
         If Not String.IsNullOrEmpty(username.Text) And Not String.IsNullOrEmpty(senha.Text) Then
@@ -34,10 +35,11 @@ Public Class _Login
             adapter.Fill(userData)
 
             If userData.Rows.Count > 0 Then
-                Dim usuario As String
                 Session.Item("usuario") = username.Text
-                Server.Transfer("HomePage.aspx", True)
-                Response.Redirect("./HomePage.aspx")
+                FormsAuthentication.RedirectFromLoginPage(username.Text, False)
+
+
+
             Else
                 mensagem.Text = "Nome e/ou usuário incorreto(s). Tente novamente."
             End If
@@ -52,4 +54,5 @@ Public Class _Login
     Protected Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
     End Sub
+
 End Class
