@@ -18,13 +18,13 @@ Public Class _Register
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         If (usuario.Text = "" Or nome.Text = "" Or senha.Text = "" Or dataNasc.Text = "" Or cidade.Text = "" Or uf.Text = "") Then
-            mensagem.Text = "Preencha todos os campos."
+            Response.Write("<script language=""javascript"">alert('Preencha todos os campos.');</script>")
         Else
             conexao.Open()
             If (senha.Text <> confirmaSenha.Text) Then
-                mensagem.Text = "As senhas não coincidem!"
+                Response.Write("<script language=""javascript"">alert('As senhas não coincidem!');</script>")
             Else
-                mensagem.Text = " "
+
                 Dim insert = New SqlCommand("insert into usuarios(usuario,nome,senha,dt_nasc,cidade,uf) values('" + usuario.Text + "','" + nome.Text + "','" + senha.Text + "','" + dataNasc.Text + "','" + cidade.Text + "','" + uf.Text + "')", conexao)
 
                 Dim sql As String = String.Empty
@@ -38,17 +38,20 @@ Public Class _Register
                 adapter.Fill(userData)
 
                 If userData.Rows.Count > 0 Then
-                    mensagem.Text = "Já existe um usuário com este nome, escolha outro nome de usuário"
+
+                    Response.Write("<script language=""javascript"">window.alert('Já existe um usuário com este nome, por favor escolha outro!');</script>")
                     usuario.Text = ""
                 Else
+                    Response.Write("<script language=""javascript"">alert(dataNasc.Text);</script>")
                     insert.ExecuteNonQuery()
                     conexao.Close()
-                    mensagem.Text = "Usuário cadastrado com sucesso! Clique em LOGIN para continuar."
+                    Response.Write("<script language=""javascript"">alert('Usuário cadastrado com sucesso!');</script>")
                     usuario.Text = ""
                     nome.Text = ""
                     dataNasc.Text = ""
                     cidade.Text = ""
                     uf.Text = ""
+                    Response.Redirect("Login.aspx")
                 End If
             End If
         End If

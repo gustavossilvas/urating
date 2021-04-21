@@ -40,21 +40,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                     <p>
-                        <asp:LinkButton class="footerlinks" ID="LinkButton1" runat="server">Página Inicial</asp:LinkButton>
-                        &nbsp;
-                        <asp:LinkButton class="footerlinks" ID="LinkButton2" runat="server" Visible="false">Registro de Livros</asp:LinkButton>
-                        &nbsp;
-                        <asp:LinkButton class="footerlinks" ID="LinkButton3" runat="server" Visible="false">Registro de Séries</asp:LinkButton>
-                        &nbsp;
-                        <asp:LinkButton class="footerlinks" ID="LinkButton5" runat="server" Visible="false">Registro de Filmes</asp:LinkButton>
-                        &nbsp;
-                        <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server" Visible="false">Avaliação de Livros</asp:LinkButton>
-                        &nbsp;
-                        <asp:LinkButton class="footerlinks" ID="LinkButton7" runat="server" Visible="false">Avaliação de Séries</asp:LinkButton>
-                        &nbsp;
-                        <asp:LinkButton class="footerlinks" ID="LinkButton8" runat="server" Visible="false">Avaliação de Filmes</asp:LinkButton>
-                        &nbsp;
-
+                        <asp:LinkButton class="footerlinks" ID="LinkButton1" runat="server">URating</asp:LinkButton>
                     </p>
                     </div>
                 </div>

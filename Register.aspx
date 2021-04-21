@@ -1,87 +1,90 @@
-﻿<%@ Page Title="Urating | Register Page" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.vb" Inherits="urating._Register" %>
-
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
-    <style>
-        asp {
-           background-color: #292929;
-        }
-
-        .fundo{
-            background-color: #292929;
-     
-        }
-        
+﻿<%@ Page Title="Urating | Register Page" Language="VB" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="Register.aspx.vb" Inherits="urating._Register" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
         .auto-style1 {
-            color: #990000;
+            width: 32px;
+            height: 32px;
         }
-        
-        .auto-style2 {
-            height: 28px;
-        }
-        
     </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <div class="container-fluid">
+      <div class="row">
+         <div class="col">
+            <div class="card">
+               <div class="card-body">
+                  <div class="row">
+                     <div class="col">
+                        <center>
+                           <img width="85px" src="user.png"/>
+                            <p>
 
-<link rel="stylesheet" href="Content/style.css">
-	<asp:Image ID="Image2" runat="server" Height="42px" ImageUrl="~/logoMack.png" Width="43px" />
-	<div class="fundo">
-  <section class="ftco-section">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-6 text-center mb-5">
-					<h1 class="heading-section">Bem vindo ao <span class="auto-style1"><strong>U</strong></span>RATING!</h1>
-					<h2 class="heading-section">Faça seu Registro</h2>
-				</div>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col-md-6 col-lg-4">
-					<div class="login-wrap p-0">
-		      	<h3 class="mb-4 text-center">Registre-se</h3>
-		      	<form action="#" class="signin-form">
-		      		<div class="form-group">
-		      			<table class="nav-justified">
-                            <tr>
-                                <td>Usuário</td>
-                                <td>
-                                    <asp:TextBox ID="usuario" runat="server" ForeColor="Black" Width="250px" ValidateRequestMode="Enabled"></asp:TextBox>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Nome Completo</td>
-                                <td>
-                                    <asp:TextBox ID="nome" runat="server" ForeColor="Black" Width="250px" ValidateRequestMode="Disabled"></asp:TextBox>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Senha</td>
-                                <td>
-                                    <asp:TextBox ID="senha" runat="server" ForeColor="Black" Width="250px" TextMode="Password" ValidateRequestMode="Enabled"></asp:TextBox>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style2">Confirmar Senha</td>
-                                <td class="auto-style2">
-                                    <asp:TextBox ID="confirmaSenha" runat="server" ForeColor="Black" Width="250px" TextMode="Password" ValidateRequestMode="Enabled"></asp:TextBox>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Data de Nascimento</td>
-                                <td>
-                                    <asp:TextBox ID="dataNasc" runat="server" ForeColor="Black" Width="250px" TextMode="Date" ValidateRequestMode="Enabled"></asp:TextBox>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Cidade</td>
-                                <td>
-                                    <asp:TextBox ID="cidade" runat="server" ForeColor="Black" Width="250px" ValidateRequestMode="Enabled"></asp:TextBox>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>UF</td>
-                                <td>
-                                    <asp:DropDownList ID="uf" runat="server" ForeColor="Black">
-                                        
-                                          
+                            </p>
+                        </center>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col">
+                        <center>
+                           <h4>Insira seus dados</h4>
+                        </center>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col">
+                        <hr>
+                     </div>
+                  </div>
+                    <div class="row">
+                     <div class="col-md-6">
+                        <label>Usuário</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="usuario" runat="server" placeholder="Usuário"></asp:TextBox>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <label>Nome Completo</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="nome" runat="server" placeholder="Nome Completo"></asp:TextBox>
+                        </div>
+                     </div>
+                                     
+                   <div class="col-md-6">
+                        <label>Senha</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="senha" runat="server" placeholder="Senha" TextMode="Password"></asp:TextBox>
+                        </div>
+                     </div>
+                    <div class="col-md-6">
+                  <label>Confirme sua senha</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="confirmaSenha" runat="server" placeholder="Confirme sua Senha" TextMode="Password"></asp:TextBox>
+                        </div>
+                     </div>
+                  </div>
+                   
+
+
+                    <div class="row justify-content-md-center">
+
+                    
+                      <div class="col-md-auto">
+                          <label>Data de Nascimento</label>
+                          
+
+                        
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="dataNasc" runat="server" placeholder="Data de Nascimento" TextMode="Date"></asp:TextBox>
+                        </div>
+                          
+                     </div>
+
+
+                     <div class="col-md-auto">
+                        <label>UF</label>
+                         <center>
+                        <div class="form-group">
+                           <asp:DropDownList class="form-control" ID="uf" runat="server">
                                             <asp:ListItem Text="AC" Value="AC"/>
                                             <asp:ListItem Text="AL" Value="AL"/>
                                             <asp:ListItem Text="AM" Value="AM"/>
@@ -109,46 +112,37 @@
                                             <asp:ListItem Text="SE" Value="SE"/>
                                             <asp:ListItem Text="SP" Value="SP"/>
                                             <asp:ListItem Text="TO" Value="TO"/>
-                                             
-                                    </asp:DropDownList>
-                                </td>
-                            </tr>
-                        </table>
-&nbsp;</div>
-	         
-	            <div class="form-group d-md-flex">
-	
-						
-	                <asp:Button ID="Button1" runat="server" BackColor="#990000" BorderColor="#990000" BorderStyle="Dashed" OnClientClick="validaSenha(); succesRegister();" Text="Registrar" />
-	
-						
-	              
-	
-						
-	                <asp:Button ID="Button2" runat="server" BackColor="#990000" BorderColor="#990000" BorderStyle="Dashed" Text="Login" PostBackUrl="Login.aspx" />
-	
-						
-	              
-	
-						
-	            </div>
-	          </form>
+                           </asp:DropDownList>
+                        </div>
+                             </center>
+                     </div>
+
+                        <div class="col-md-auto">
+                        <label>Cidade</label>
+                        <div class="form-group">
+                           <asp:TextBox class="form-control" ID="cidade" runat="server" placeholder="Cidade"></asp:TextBox>
+                        </div>
+                     </div>
 
 
-		      </div>
-				    <asp:Label ID="mensagem" runat="server" Width="50%"></asp:Label>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				</div>
-			</div>
-		</div>
-	</section>
+                    
+                  </div>
+                  
 
-
-	<script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
-
+                 
+                     
+                  </div>
+                  <div class="row">
+                     <div class="col-2 mx-auto">
+                        <center>
+                           <div class="form-group">
+                              <asp:Button class="btn btn-danger btn-block btn-lg" ID="Button1" runat="server" Text="Registrar" />
+                           </div>
+                        </center>
+                     </div>
+                  </div>
+                  </div>
+               </div>
             </div>
-
+           
 </asp:Content>
