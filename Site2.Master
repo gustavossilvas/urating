@@ -1,10 +1,11 @@
-﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site1.master.vb" Inherits="urating.Site1" %>
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site2.master.vb" Inherits="urating.Site2" %>
 
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, text/html, charset=utf-8" http-equiv="Content-Type"/>
+
     <title></title>
 
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
@@ -24,61 +25,12 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body class="bg-dark">
+<body class="bg-image" style="background-image: url('fundo.jpg'); height: 1vh; ">
     
     <form id="form1" runat="server">
-    <div >
-        
-        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-            <a class="navbar-brand" href="HomePage.aspx">
-            <img src="logoMack.png" width="30" height="30"/>     
-                 Urating
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle Navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-             
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="HomePage.aspx">  Home</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="Profile.aspx"> Perfil </a>
-                </li>
-                <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"> Avaliar
-                        </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" >
-                    <li><a class="dropdown-item" href="#">Filmes</a></li>
-                    <li><a class="dropdown-item" href="#">Séries</a></li>
-                    <li><a class="dropdown-item" href="#">Livros</a></li>
-                </ul>
-                </li>
-                <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" id="navbarDropdown2" role="button" data-toggle="dropdown"> Ver Avaliações
-                        </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Filmes</a></li>
-                    <li><a class="dropdown-item" href="#">Séries</a></li>
-                    <li><a class="dropdown-item" href="#">Livros</a></li>
-                </ul>
-                </li>
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server"> Sair </asp:LinkButton>
-                    </li>
-                </ul>
-            </div>
-
-        </nav>
-    </div>
-    <p>
-
-    </p>
-    <div class="bg-dark">
+    
+    <div
+        >
         <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
 
         </asp:ContentPlaceHolder>
