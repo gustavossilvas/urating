@@ -53,9 +53,9 @@
                   </div>
                   <div class="row">
                      <div class="col">
-                        <label>Email</label>
+                        <label>Nome de Usuário</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Email" TextMode="Email"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Nome de Usuário"></asp:TextBox>
                         </div>
                      </div>
                   </div>
