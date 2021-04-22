@@ -14,15 +14,6 @@ Option Explicit On
 Partial Public Class _Login
 
     '''<summary>
-    '''Controle Image2.
-    '''</summary>
-    '''<remarks>
-    '''Campo gerado automaticamente.
-    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-    '''</remarks>
-    Protected WithEvents Image2 As Global.System.Web.UI.WebControls.Image
-
-    '''<summary>
     '''Controle username.
     '''</summary>
     '''<remarks>
@@ -48,22 +39,4 @@ Partial Public Class _Login
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
     Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Controle Button2.
-    '''</summary>
-    '''<remarks>
-    '''Campo gerado automaticamente.
-    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-    '''</remarks>
-    Protected WithEvents Button2 As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Controle mensagem.
-    '''</summary>
-    '''<remarks>
-    '''Campo gerado automaticamente.
-    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-    '''</remarks>
-    Protected WithEvents mensagem As Global.System.Web.UI.WebControls.Label
 End Class

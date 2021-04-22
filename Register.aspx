@@ -8,9 +8,18 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-    <div class="container-fluid">
+    <div class="container">
+        <br />
+        <br />
+             <br />
+             <br />
+             <br />
+        <br />
+       <br />
+        <br />
+       <br />
       <div class="row">
-         <div class="col">
+         <div class="col-md-8 mx-auto">
             <div class="card">
                <div class="card-body">
                   <div class="row">
@@ -123,25 +132,33 @@
                            <asp:TextBox class="form-control" ID="cidade" runat="server" placeholder="Cidade"></asp:TextBox>
                         </div>
                      </div>
-
-
                     
                   </div>
-                  
-
-                 
-                     
-                  </div>
-                  <div class="row">
-                     <div class="col-2 mx-auto">
+                <div class="row">
+                     <div class="col-6 mx-auto">
                         <center>
                            <div class="form-group">
+                               <br />
                               <asp:Button class="btn btn-danger btn-block btn-lg" ID="Button1" runat="server" Text="Registrar" />
                            </div>
                         </center>
                      </div>
+                  </div> 
                   </div>
+                    
                   </div>
+             <br />
+        <br />
+             <br />
+             <br />
+             <p>
+
+             </p>
+       
+       <br />
+        <br />
+       <br />
+             <br />
                </div>
             </div>
            

@@ -41,17 +41,13 @@ Public Class _Login
 
 
             Else
-                mensagem.Text = "Nome e/ou usuário incorreto(s). Tente novamente."
+                Response.Write("<script language=""javascript"">alert('Nome e/ou usuário incorreto(s). Tente novamente.');</script>")
             End If
 
         Else
-            mensagem.Text = "Informe usuario e senha"
+            Response.Write("<script language=""javascript"">alert('Por favor, insira usuário e senha!');</script>")
 
         End If
-
-    End Sub
-
-    Protected Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
     End Sub
 

@@ -1,18 +1,8 @@
-﻿Imports System.Data.SqlClient
-Imports urating._Login
+﻿Public Class HomePage
+    Inherits System.Web.UI.Page
 
-
-Public Class _HomePage
-    Inherits Page
-
-
-    Public Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
-        Dim getUsuario As String = Session.Item("usuario")
-        userInfo.Text = getUsuario
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
     End Sub
-
-
-
 
 End Class
