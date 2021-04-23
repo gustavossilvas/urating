@@ -20,21 +20,25 @@
                <center>
                   <img width="150px" src=""/>
                   <h4>Livros</h4>
-                  <p class="text-justify">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
+                  <p class="text-justify">Você que é apaixonado por livros, tem dúvida sobre sua próxima leitura?
+                                        Busque por avaliações sobre os melhores títulos de seus autores preferidos e não erre nunca mais na escolha de seus livros. Além disso, aproveite e deixe sua opinião sobre os livros que já leu, fazendo análises e críticas!</p>
                </center>
             </div>
             <div class="col-md-4">
                <center>
                   <img width="150px" src=""/>
                   <h4>Séries</h4>
-                  <p class="text-justify">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
+                  <p class="text-justify">Fanático por maratona de séries, você encontrou o seu lugar! Venha participar de uma enorme comunidade, compartilhando sua avaliação sobre todas as séries maratonadas por você. 
+                      Faça analises, leia críticas, faça amigos e nunca mais erre quando o assunto for série!!</p>
                </center>
             </div>
             <div class="col-md-4">
                <center>
                   <img width="150px" src=""/>
                   <h4>Filmes</h4>
-                  <p class="text-justify">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
+                  <p class="text-justify">Você está cansado da mesmice? Abre a TV e está cansado de rondar os filmes disponíveis?
+                     Aqui você poderá escolher um filme a partir de avalições feita por amigos aqui em nossa plataforma. Mas você também pode participar fazendo sua análise ou comentando todas que desejar!
+                    </p>
                </center>
             </div>
          </div>
@@ -51,7 +55,7 @@
             <div class="col-12">
                <center>
                   <h2>Comece</h2>
-                  <p><b>Siga os passos abaixo e seja um Urater!</b></p>
+                  <p><b>Mude sua forma de escolha. Seja um uRater! </b></p>
                </center>
             </div>
          </div>
@@ -60,22 +64,22 @@
                <center>
                   <a href="Register.aspx" style="text-decoration: none; color:white;"><img width="150px" src="cadastro.png" />
                   <h4  >Registre-se</h4>
-                  <p class="text-justify">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
+                  <p class="text-justify">Crie sua conta no uRating para aproveitar a melhor comunidade de avaliações de séries, filmes e livros! E o melhor, faça tudo isso com seus amigos, adicionando em sua lista de amigos, curtindo e comentando avaliações!! </p>
                       </a>
                </center>
             </div>
             <div class="col-md-4">
                <center>
                   <img width="150px" src="avaliacaolanding.png"/>
-                  <h4>Avalie Livros, Séries e Filmes</h4>
-                  <p class="text-justify">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
+                  <h4>Avalie seus títulos preferidos!</h4>
+                  <p class="text-justify">Avalie livros, filmes e séries baseando-se em sua experiência pessoal, criando e promovendo debates a respeito de críticas e analises já existentes! Aqui a sua opinião é o ponto chave da comunidade!</p>
                </center>
             </div>
             <div class="col-md-4">
                <center>
                   <img width="150px" src="avaliacaopessoas.png"/>
                   <h4>Leia outras avaliações</h4>
-                  <p class="text-justify">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
+                  <p class="text-justify">Acompanhe outros pontos de vista sobre seus títulos preferidos e tudo o que pensam a respeito deles. Além disso, faça comentários apresentando o que acha daquela obra e crie debates incríveis!</p>
                </center>
             </div>
          </div>
