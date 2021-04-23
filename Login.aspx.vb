@@ -25,7 +25,7 @@ Public Class _Login
         If Not String.IsNullOrEmpty(username.Text) And Not String.IsNullOrEmpty(senha.Text) Then
 
             Dim sql As String = String.Empty
-            sql = "select usuario, senha from usuarios where usuario = '" + username.Text + "' and senha = '" + senha.Text + "'"
+            sql = "select * from usuarios where usuario = '" + username.Text + "' and senha = '" + senha.Text + "'"
 
             Dim dt As New DataTable
             Dim adapter As New SqlDataAdapter
@@ -33,8 +33,16 @@ Public Class _Login
             adapter = New SqlDataAdapter(sql, conexao)
             Dim userData As New DataTable
             adapter.Fill(userData)
-
             If userData.Rows.Count > 0 Then
+                Dim isAdmin As Object = userData.Rows.Item(0).Item("isAdmin")
+                If isAdmin = True Then
+                    Session.Item("role") = "Admin"
+                ElseIf isAdmin = False Then
+
+                    Session.Item("role") = "user"
+                Else
+                    Session.Item("role") = "visitante"
+                End If
                 Session.Item("usuario") = username.Text
                 FormsAuthentication.RedirectFromLoginPage(username.Text, False)
 
@@ -51,4 +59,7 @@ Public Class _Login
 
     End Sub
 
+    Protected Sub username_TextChanged(sender As Object, e As EventArgs) Handles username.TextChanged
+
+    End Sub
 End Class

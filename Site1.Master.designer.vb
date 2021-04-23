@@ -32,13 +32,22 @@ Partial Public Class Site1
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Controle LinkButton4.
+    '''Controle usercontrol.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents LinkButton4 As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents usercontrol As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''Controle Sair.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents Sair As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
     '''Controle ContentPlaceHolder2.

@@ -27,21 +27,16 @@
                      </div>
                   </div>
                   <div class="row">
-                     <div class="col-md-6">
-                        <label>Usuário</label>
+                     <div class="col-md-12">
+                        <label>Nome da Série</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Usuário"></asp:TextBox>
+                            <div class="input-group">
+                           <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Nome da Série"></asp:TextBox>
+                            <asp:Button class="btn btn-primary" ID="Button1" runat="server" Text="Buscar" />
+                                </div>
                         </div>
                      </div>
-                     <div class="col-md-6">
-                        <label>ID Série</label>
-                        <div class="form-group">
-                           <div class="input-group">
-                              <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="ID Série"></asp:TextBox>
-                              <asp:Button class="btn btn-primary" ID="Button1" runat="server" Text="Buscar" />
-                           </div>
-                        </div>
-                     </div>
+                    
                   </div>
                   <div class="row">
                      <div class="col-md-6">
@@ -72,11 +67,11 @@
                      </div>
                   </div>
                   <div class="row">
-                     <div class="col-6">
-                        <asp:Button ID="Button2" class="btn btn-lg btn-block btn-danger" runat="server" Text="Avaliar" />
-                     </div>
-                     <div class="col-6">
-                        <asp:Button ID="Button4" class="btn btn-lg btn-block btn-danger" runat="server" Text="Voltar" />
+                     <div class="col-12">
+                        <label>Avaliação</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Comentário" TextMode="MultiLine" Rows="5" ReadOnly="true"></asp:TextBox>
+                        </div>
                      </div>
                   </div>
                </div>
@@ -111,4 +106,3 @@
        <br />
    </div>
 </asp:Content>
-

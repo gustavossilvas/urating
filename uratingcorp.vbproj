@@ -134,6 +134,9 @@
     <Content Include="Avaliacaolivros.aspx" />
     <Content Include="AvaliacaoSeries.aspx" />
     <Content Include="books.png" />
+    <Content Include="CadastroFilmes.aspx" />
+    <Content Include="CadastroLivros.aspx" />
+    <Content Include="CadastroSeries.aspx" />
     <Content Include="Content\all.css" />
     <Content Include="avaliacao.png" />
     <Content Include="avaliacaolanding.png" />
@@ -202,7 +205,7 @@
     <Content Include="Scripts\fontawesome\v4-shims.min.js" />
     <Content Include="serie.png" />
     <Content Include="SeriesRating.aspx" />
-    <Content Include="Admin\UserControl.aspx" />
+    <Content Include="UserControl.aspx" />
     <None Include="My Project\PublishProfiles\urating - Web Deploy.pubxml" />
     <Content Include="logoMack.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -372,6 +375,27 @@
       <DependentUpon>AvaliacaoSeries.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="CadastroFilmes.aspx.designer.vb">
+      <DependentUpon>CadastroFilmes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroFilmes.aspx.vb">
+      <DependentUpon>CadastroFilmes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CadastroLivros.aspx.designer.vb">
+      <DependentUpon>CadastroLivros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroLivros.aspx.vb">
+      <DependentUpon>CadastroLivros.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CadastroSeries.aspx.designer.vb">
+      <DependentUpon>CadastroSeries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroSeries.aspx.vb">
+      <DependentUpon>CadastroSeries.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Contact.aspx.designer.vb">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
@@ -478,10 +502,10 @@
       <DependentUpon>SeriesRating.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Admin\UserControl.aspx.designer.vb">
+    <Compile Include="UserControl.aspx.designer.vb">
       <DependentUpon>UserControl.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\UserControl.aspx.vb">
+    <Compile Include="UserControl.aspx.vb">
       <DependentUpon>UserControl.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
@@ -528,6 +552,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Admin\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>

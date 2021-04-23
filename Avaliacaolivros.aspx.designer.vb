@@ -14,15 +14,6 @@ Option Explicit On
 Partial Public Class Avaliacaolivros
 
     '''<summary>
-    '''Controle FileUpload1.
-    '''</summary>
-    '''<remarks>
-    '''Campo gerado automaticamente.
-    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-    '''</remarks>
-    Protected WithEvents FileUpload1 As Global.System.Web.UI.WebControls.FileUpload
-
-    '''<summary>
     '''Controle TextBox1.
     '''</summary>
     '''<remarks>
@@ -32,13 +23,13 @@ Partial Public Class Avaliacaolivros
     Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Controle DropDownList1.
+    '''Controle TextBox4.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents DropDownList1 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents TextBox4 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Controle TextBox2.

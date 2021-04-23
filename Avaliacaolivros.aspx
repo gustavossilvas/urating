@@ -26,14 +26,9 @@
                      </div>
                   </div>
                   <div class="row">
-                     <div class="col">
-                        <asp:FileUpload class="form-control" ID="FileUpload1" runat="server" />
-                     </div>
-                  </div>
-                  <div class="row">
                       <br />
                      <div class="col-md-12">
-                        <label>Nome do livro</label>
+                        <label>Nome do Livro</label>
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Nome do Livro"></asp:TextBox>
                         </div>
@@ -42,35 +37,28 @@
                   <div class="row">
                      <div class="col-md-4">
                         <label>Idioma</label>
-                        <div class="form-group">
-                           <asp:DropDownList class="form-control" ID="DropDownList1" runat="server">
-                              <asp:ListItem Text="Português" Value="Português" />
-                              <asp:ListItem Text="Inglês" Value="Inglês" />
-                              <asp:ListItem Text="Alemão" Value="Alemão" />
-                              <asp:ListItem Text="Espanhol" Value="Espanhol" />
-                              <asp:ListItem Text="Francês" Value="Francês" />
-                              <asp:ListItem Text="Outros" Value="Outros" />
-                           </asp:DropDownList>
+                        <div class="form-group" >
+                        <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Idioma" ReadOnly="true"></asp:TextBox>
                         </div>
-                        <label>Nome da Editora</label>
+                        <label>Editora</label>
                         <div class="form-group">
-                            <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Nome da Editora"></asp:TextBox>
+                            <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Nome da Editora" ReadOnly="true"></asp:TextBox>
                         </div>
                      </div>
                      <div class="col-md-4">
                         <label>Nome do Autor</label>
                         <div class="form-group">
-                            <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="Nome do Autor"></asp:TextBox>
+                            <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="Nome do Autor" ReadOnly="true"></asp:TextBox>
                         </div>
                         <label>Data de Publicação</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Data da Publicação" TextMode="Date"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Data de Publicação" TextMode="Date" ReadOnly="true"></asp:TextBox>
                         </div>
                      </div>
                      <div class="col-md-4">
                         <label>Gênero</label>
                         <div class="form-group">
-                           <asp:ListBox CssClass="form-control" ID="ListBox1" runat="server" SelectionMode="Multiple" Rows="5">
+                           <asp:ListBox CssClass="form-control" ID="ListBox1" runat="server" SelectionMode="Multiple" Rows="5" ReadOnly="true">
                               <asp:ListItem Text="Ação" Value="Ação" />
                               <asp:ListItem Text="Aventura" Value="Aventura" />
                               <asp:ListItem Text="Gibi" Value="Gibi" />
@@ -104,8 +92,8 @@
                   <div class="row">
                      <div class="col-md-4">
                         <label>Edição</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" placeholder="Edição"></asp:TextBox>
+                        <div class="form-group" >
+                           <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" placeholder="Edição" ReadOnly="true"></asp:TextBox>
                         </div>
                      </div>
                      <div class="col-md-4">
@@ -116,16 +104,16 @@
                      </div>
                      <div class="col-md-4">
                         <label>Páginas</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox11" runat="server" placeholder="Páginas" TextMode="Number"></asp:TextBox>
+                        <div class="form-group" >
+                           <asp:TextBox CssClass="form-control" ID="TextBox11" runat="server" textMode="Number" placeholder="Páginas"  ReadOnly="true"></asp:TextBox>
                         </div>
                      </div>
                   </div>                
                   <div class="row">
                      <div class="col-12">
-                        <label>Avaliação/Descrição</label>
+                        <label>Avaliação</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Faça um breve resumo do livro e justifique sua nota" TextMode="MultiLine" Rows="5"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Faça um breve resumo da sua opinião sobre o Livro" TextMode="MultiLine" Rows="5"></asp:TextBox>
                         </div>
                      </div>
                   </div>
@@ -145,7 +133,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <h4>Histórico das suas Avaliações</h4>
+                           <h4>Livros</h4>
                         </center>
                      </div>
                   </div>

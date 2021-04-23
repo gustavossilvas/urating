@@ -26,11 +26,6 @@
                      </div>
                   </div>
                   <div class="row">
-                     <div class="col">
-                        <asp:FileUpload class="form-control" ID="FileUpload1" runat="server" />
-                     </div>
-                  </div>
-                  <div class="row">
                       <br />
                      <div class="col-md-12">
                         <label>Nome da Série</label>
@@ -42,35 +37,28 @@
                   <div class="row">
                      <div class="col-md-4">
                         <label>Idioma</label>
-                        <div class="form-group">
-                           <asp:DropDownList class="form-control" ID="DropDownList1" runat="server">
-                              <asp:ListItem Text="Português" Value="Português" />
-                              <asp:ListItem Text="Inglês" Value="Inglês" />
-                              <asp:ListItem Text="Alemão" Value="Alemão" />
-                              <asp:ListItem Text="Espanhol" Value="Espanhol" />
-                              <asp:ListItem Text="Francês" Value="Francês" />
-                              <asp:ListItem Text="Outros" Value="Outros" />
-                           </asp:DropDownList>
+                        <div class="form-group" >
+                        <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Idioma" ReadOnly="true"></asp:TextBox>
                         </div>
-                        <label>Nome da plataforma de Streaming</label>
+                        <label>Plataforma de Streaming</label>
                         <div class="form-group">
-                            <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Nome da plataforma de Streaming"></asp:TextBox>
+                            <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Nome da Plataforma" ReadOnly="true"></asp:TextBox>
                         </div>
                      </div>
                      <div class="col-md-4">
                         <label>Nome do Diretor</label>
                         <div class="form-group">
-                            <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="Nome do Diretor"></asp:TextBox>
+                            <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="Nome do Diretor" ReadOnly="true"></asp:TextBox>
                         </div>
                         <label>Data de Lançamento</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Data de Lançamento" TextMode="Date"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Data de Lançamento" TextMode="Date" ReadOnly="true"></asp:TextBox>
                         </div>
                      </div>
                      <div class="col-md-4">
                         <label>Gênero</label>
                         <div class="form-group">
-                           <asp:ListBox CssClass="form-control" ID="ListBox1" runat="server" SelectionMode="Multiple" Rows="5">
+                           <asp:ListBox CssClass="form-control" ID="ListBox1" runat="server" SelectionMode="Multiple" Rows="5" ReadOnly="true">
                               <asp:ListItem Text="Ação" Value="Ação" />
                               <asp:ListItem Text="Aventura" Value="Aventura" />
                               <asp:ListItem Text="Gibi" Value="Gibi" />
@@ -104,8 +92,8 @@
                   <div class="row">
                      <div class="col-md-4">
                         <label>Temporada</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" TextMode="Number" placeholder="Temporada"></asp:TextBox>
+                        <div class="form-group" >
+                           <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" TextMode="Number" placeholder="Temporada" ReadOnly="true"></asp:TextBox>
                         </div>
                      </div>
                      <div class="col-md-4">
@@ -116,16 +104,16 @@
                      </div>
                      <div class="col-md-4">
                         <label>Tempo médio de episódio</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox11" runat="server" placeholder="Tempo médio de cada episódio" TextMode="Time"></asp:TextBox>
+                        <div class="form-group" >
+                           <asp:TextBox CssClass="form-control" ID="TextBox11" runat="server" placeholder="Tempo médio de cada episódio" TextMode="Time" ReadOnly="true"></asp:TextBox>
                         </div>
                      </div>
                   </div>                
                   <div class="row">
                      <div class="col-12">
-                        <label>Avaliação/Descrição</label>
+                        <label>Avaliação</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Faça um breve resumo da série e justifique sua nota" TextMode="MultiLine" Rows="5"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Faça um breve resumo da sua opinião sobre a série" TextMode="MultiLine" Rows="5"></asp:TextBox>
                         </div>
                      </div>
                   </div>
@@ -145,7 +133,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <h4>Histórico das suas Avaliações</h4>
+                           <h4>Séries</h4>
                         </center>
                      </div>
                   </div>
