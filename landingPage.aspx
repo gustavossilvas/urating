@@ -8,6 +8,14 @@
    <section>
       <div class="container">
           <div class="jumbotron" style="background-color: #8b0909; color:white;">
+            <div class="row">
+                <div class="col-10">
+                    </div>
+                <div class="col-2">
+                    <asp:Button ID="Button1" class="btn btn-lg btn-block btn-danger" runat="server" Text="Entrar"/>
+                </div>
+                
+            </div>
          <div class="row">
             <div class="col-12">
                <center>
@@ -70,14 +78,14 @@
             </div>
             <div class="col-md-4">
                <center>
-                  <img width="150px" src="avaliacaolanding.png"/>
+                  <img width="150px" src="avaliacaolanding.png" href="Avaliacaofilmes.aspx"/>
                   <h4>Avalie seus títulos preferidos!</h4>
                   <p class="text-justify">Avalie livros, filmes e séries baseando-se em sua experiência pessoal, criando e promovendo debates a respeito de críticas e analises já existentes! Aqui a sua opinião é o ponto chave da comunidade!</p>
                </center>
             </div>
             <div class="col-md-4">
                <center>
-                  <img width="150px" src="avaliacaopessoas.png"/>
+                  <img width="150px" src="avaliacaopessoas.png" href="MovieRating.aspx"/>
                   <h4>Leia outras avaliações</h4>
                   <p class="text-justify">Acompanhe outros pontos de vista sobre seus títulos preferidos e tudo o que pensam a respeito deles. Além disso, faça comentários apresentando o que acha daquela obra e crie debates incríveis!</p>
                </center>

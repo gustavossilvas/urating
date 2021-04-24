@@ -15,7 +15,12 @@
     End Sub
 
     Protected Sub Sair_Click(sender As Object, e As EventArgs) Handles Sair.Click
+        If Request.Cookies("autenticacao") IsNot Nothing Then
+            Request.Cookies("autenticacao").Expires = Date.Now.AddDays(-1)
+
+        End If
         Session.Clear()
+        Session.Abandon()
         Response.Redirect("Login.aspx")
     End Sub
 End Class

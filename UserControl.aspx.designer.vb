@@ -14,40 +14,40 @@ Option Explicit On
 Partial Public Class WebForm5
 
     '''<summary>
-    '''Controle TextBox1.
+    '''Controle username.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents username As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Controle LinkButton4.
+    '''Controle Button1.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents LinkButton4 As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Controle TextBox2.
+    '''Controle fullname.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents TextBox2 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents fullname As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Controle TextBox7.
+    '''Controle status.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents TextBox7 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents status As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Controle LinkButton1.
@@ -77,83 +77,92 @@ Partial Public Class WebForm5
     Protected WithEvents LinkButton3 As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
-    '''Controle TextBox9.
+    '''Controle uf.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents TextBox9 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents uf As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Controle TextBox10.
+    '''Controle cidade.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents TextBox10 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents cidade As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Controle TextBox11.
+    '''Controle dtnasc.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents TextBox11 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents dtnasc As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Controle TextBox6.
+    '''Controle navaliacoes.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents TextBox6 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents navaliacoes As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Controle TextBox3.
+    '''Controle namigos.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents TextBox3 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents namigos As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Controle TextBox4.
+    '''Controle funcao.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents TextBox4 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents funcao As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Controle Button2.
+    '''Controle deleteuser.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents Button2 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents deleteuser As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Controle Button1.
+    '''Controle makeadmin.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents makeadmin As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Controle GridView1.
+    '''Controle SqlDataSource1.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
+    Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
+
+    '''<summary>
+    '''Controle tabelausuarios.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents tabelausuarios As Global.System.Web.UI.WebControls.GridView
 End Class
