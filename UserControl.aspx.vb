@@ -21,7 +21,7 @@ Public Class WebForm5
             adapter = New SqlDataAdapter(sqlselect, conexao)
             Dim userData As New DataTable
             adapter.Fill(userData)
-            Dim dr As SqlClient.SqlDataReader
+
 
             If userData.Rows.Count > 0 Then
                 conexao.Open()
@@ -75,6 +75,40 @@ Public Class WebForm5
 
     End Sub
 
+    Protected Sub LinkButton1_Click(sender As Object, e As EventArgs) Handles LinkButton1.Click
+        conexao.Open()
+        cmd = conexao.CreateCommand()
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "update usuarios set status = 'Ativo' where usuario = '" + username.Text + "'"
+        cmd.ExecuteNonQuery()
+        tabelausuarios.DataBind()
+        Response.Write("<script language=""javascript"">window.alert('Status de usuário alterado com sucesso!');</script>")
+        conexao.Close()
+
+    End Sub
+    Protected Sub LinkButton2_Click(sender As Object, e As EventArgs) Handles LinkButton2.Click
+        conexao.Open()
+        cmd = conexao.CreateCommand()
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "update usuarios set status = 'Pendente' where usuario = '" + username.Text + "'"
+        cmd.ExecuteNonQuery()
+        tabelausuarios.DataBind()
+        Response.Write("<script language=""javascript"">window.alert('Status de usuário alterado com sucesso!');</script>")
+        conexao.Close()
+
+    End Sub
+    Protected Sub LinkButton3_Click(sender As Object, e As EventArgs) Handles LinkButton3.Click
+        conexao.Open()
+        cmd = conexao.CreateCommand()
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "update usuarios set status = 'Bloqueado' where usuario = '" + username.Text + "'"
+        cmd.ExecuteNonQuery()
+        tabelausuarios.DataBind()
+        Response.Write("<script language=""javascript"">window.alert('Status de usuário alterado com sucesso!');</script>")
+        conexao.Close()
+
+    End Sub
+
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         conexao.Open()
         cmd = conexao.CreateCommand()
@@ -103,5 +137,10 @@ Public Class WebForm5
         Else
                 Response.Write("<script language=""javascript"">window.alert('Usuário não encontrado!');</script>")
         End If
+    End Sub
+
+    Protected Sub tabelausuarios_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tabelausuarios.SelectedIndexChanged
+
+
     End Sub
 End Class

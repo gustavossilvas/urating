@@ -147,7 +147,7 @@
                   <div class="row">
                       <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:friendflixDBConnectionString %>" SelectCommand="SELECT [id], [usuario], [nome], [dt_nasc], [cidade], [uf], [isAdmin], [n_amigos], [status], [n_avaliacoes], [dt_cadastro] FROM [usuarios] ORDER BY [id]"></asp:SqlDataSource>
                      <div class="col">
-                        <asp:GridView class="table table-striped table-bordered" ID="tabelausuarios" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource1">
+                        <asp:GridView class="table table-striped table-bordered nowrap" ID="tabelausuarios" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource1">
                             <Columns>
                                 <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
                                 <asp:BoundField DataField="usuario" HeaderText="usuario" SortExpression="usuario" />

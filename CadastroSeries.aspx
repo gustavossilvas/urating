@@ -1,5 +1,40 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site1.Master" CodeBehind="CadastroSeries.aspx.vb" Inherits="urating.CadastroSeries" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server"></asp:Content>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+     <script type="text/javascript">
+
+       function readURL(input) {
+           if (input.files && input.files[0]) {
+               var reader = new FileReader();
+               var k=0
+               reader.onload = function (e) {
+                   $('#imgview').attr('src', e.target.result);
+               };
+               
+               reader.readAsDataURL(input.files[0]);
+               while (k < 1) {
+                   k= k + 1;
+               }
+               if (k == 1) {
+               var img = document.getElementById('imgview');
+               img.crossOrigin = 'Anonymous';
+                   img.onload = function () {
+                       var canvas = document.createElement('canvas');
+                       var ctx = canvas.getContext('2d');
+                       canvas.height = this.naturalHeight;
+                       canvas.width = this.naturalWidth;
+                       ctx.drawImage(this, 0, 0);
+                       var data = canvas.toDataURL('image/jpeg');
+                       $('#<%= imagembase64.ClientID %>').val(data);
+                   }
+               }
+           }
+
+       }
+
+
+
+     </script>
+</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
    <div class="container-fluid">
       <div class="row">
@@ -17,7 +52,8 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <img width="100px" src="serie.png" />
+                           <img id="imgview" src="serie.png" width="150px"/>
+                            <asp:HiddenField ID="imagembase64" runat="server" />
                         </center>
                      </div>
                   </div>
@@ -31,7 +67,7 @@
                      <div class="col-md-12">
                         <label>Insira a capa da série</label>
                         <div class="form-group">
-                           <asp:FileUpload class="form-control" ID="FileUpload1" runat="server" />
+                            <asp:FileUpload onchange="readURL(this);" class="form-control" ID="capa" runat="server" />
                         </div>
                      </div>
                   </div>
@@ -41,7 +77,7 @@
                         <label>Nome da Série
                         </label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Nome da Série"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="nomeserie" runat="server" placeholder="Nome da Série"></asp:TextBox>
                         </div>
                      </div>
                   </div>
@@ -49,7 +85,7 @@
                      <div class="col-md-4">
                         <label>Idioma</label>
                         <div class="form-group">
-                           <asp:DropDownList class="form-control" ID="DropDownList1" runat="server">
+                           <asp:DropDownList class="form-control" ID="idioma" runat="server">
                               <asp:ListItem Text="Português" Value="Português" />
                               <asp:ListItem Text="Inglês" Value="Inglês" />
                               <asp:ListItem Text="Alemão" Value="Alemão" />
@@ -58,25 +94,25 @@
                               <asp:ListItem Text="Outros" Value="Outros" />
                            </asp:DropDownList>
                         </div>
-                        <label>Nome da Produtora</label>
+                        <label>Plataforma de Streaming</label>
                         <div class="form-group">
-                            <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Nome da Produtora"></asp:TextBox>
+                            <asp:TextBox CssClass="form-control" ID="plataformanome" runat="server" placeholder="Nome da Produtora"></asp:TextBox>
                         </div>
                      </div>
                      <div class="col-md-4">
                         <label>Nome do Diretor</label>
                         <div class="form-group">
-                            <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="Nome do Diretor"></asp:TextBox>
+                            <asp:TextBox CssClass="form-control" ID="diretornome" runat="server" placeholder="Nome do Diretor"></asp:TextBox>
                         </div>
                         <label>Data de Lançamento</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Data de Lançamento" TextMode="Date"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="dtlancamento" runat="server" placeholder="Data de Lançamento" TextMode="Date"></asp:TextBox>
                         </div>
                      </div>
                      <div class="col-md-4">
                         <label>Gênero</label>
                         <div class="form-group">
-                           <asp:ListBox CssClass="form-control" ID="ListBox1" runat="server" SelectionMode="Multiple" Rows="5">
+                           <asp:ListBox CssClass="form-control" ID="genero" runat="server" SelectionMode="Multiple" Rows="5">
                               <asp:ListItem Text="Ação" Value="Ação" />
                               <asp:ListItem Text="Aventura" Value="Aventura" />
                               <asp:ListItem Text="Gibi" Value="Gibi" />
@@ -111,14 +147,14 @@
                      <div class="col-md-4">
                         <label>Temporada</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" TextMode="Number" placeholder="Use 1 se não existir outra"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="temporada" runat="server" TextMode="Number" placeholder="Use 1 se não existir outra"></asp:TextBox>
                         </div>
                      </div>
                     
                      <div class="col-md-4">
                         <label>Tempo médio de cada episódio</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox11" runat="server" placeholder="Tempo média dos episódios" TextMode="Time"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="tempep" runat="server" placeholder="Tempo média dos episódios" TextMode="Time"></asp:TextBox>
                         </div>
                      </div>
                   </div>                
@@ -126,7 +162,7 @@
                      <div class="col-12">
                         <label>Descrição</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Faça um breve resumo da série" TextMode="MultiLine" Rows="5"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="descricao" runat="server" placeholder="Faça um breve resumo da série" TextMode="MultiLine" Rows="5"></asp:TextBox>
                         </div>
                      </div>
                   </div>

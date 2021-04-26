@@ -14,94 +14,103 @@ Option Explicit On
 Partial Public Class CadastroLivros
 
     '''<summary>
-    '''Controle FileUpload1.
+    '''Controle imagembase64.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents FileUpload1 As Global.System.Web.UI.WebControls.FileUpload
+    Protected WithEvents imagembase64 As Global.System.Web.UI.WebControls.HiddenField
 
     '''<summary>
-    '''Controle TextBox1.
+    '''Controle capa.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents capa As Global.System.Web.UI.WebControls.FileUpload
 
     '''<summary>
-    '''Controle DropDownList1.
+    '''Controle nomelivro.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents DropDownList1 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents nomelivro As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Controle TextBox2.
+    '''Controle idioma.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents TextBox2 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents idioma As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Controle TextBox8.
+    '''Controle editoralivro.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents TextBox8 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents editoralivro As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Controle TextBox3.
+    '''Controle autorlivro.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents TextBox3 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents autorlivro As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Controle ListBox1.
+    '''Controle dtpubli.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents ListBox1 As Global.System.Web.UI.WebControls.ListBox
+    Protected WithEvents dtpubli As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Controle TextBox9.
+    '''Controle genero.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents TextBox9 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents genero As Global.System.Web.UI.WebControls.ListBox
 
     '''<summary>
-    '''Controle TextBox11.
+    '''Controle edicao.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents TextBox11 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents edicao As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Controle TextBox6.
+    '''Controle paginas.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents TextBox6 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents paginas As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Controle descricao.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents descricao As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Controle Button1.
