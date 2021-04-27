@@ -99,7 +99,7 @@
                      <div class="col-md-4">
                         <label>Nota</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox10" runat="server" placeholder="0 - 5" TextMode="Number" min="0" max="5"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox10" runat="server" placeholder="0 - 10" TextMode="Number" min="0" max="10"></asp:TextBox>
                         </div>
                      </div>
                      <div class="col-md-4">

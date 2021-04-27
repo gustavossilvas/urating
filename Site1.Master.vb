@@ -6,8 +6,10 @@
 
         If Request.Cookies("admin") Is Nothing Then
             usercontrol.Visible = False
+            gerenciaravaliacoes.visible = False
         Else
             usercontrol.Visible = True
+            gerenciaravaliacoes.visible = True
         End If
 
     End Sub

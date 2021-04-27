@@ -329,7 +329,9 @@
     <Content Include="Content\v4-shims.min.css" />
     <Content Include="filme.png" />
     <Content Include="fundo.jpg" />
-    <Content Include="GerenciarAvaliacoes.aspx" />
+    <Content Include="GerenciaCadfilmes.aspx" />
+    <Content Include="GerenciaCadlivros.aspx" />
+    <Content Include="GerenciaCadseries.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="landingPage.aspx" />
     <Content Include="rating.png" />
@@ -632,11 +634,25 @@
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="GerenciarAvaliacoes.aspx.designer.vb">
-      <DependentUpon>GerenciarAvaliacoes.aspx</DependentUpon>
+    <Compile Include="GerenciaCadfilmes.aspx.designer.vb">
+      <DependentUpon>GerenciaCadfilmes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GerenciarAvaliacoes.aspx.vb">
-      <DependentUpon>GerenciarAvaliacoes.aspx</DependentUpon>
+    <Compile Include="GerenciaCadfilmes.aspx.vb">
+      <DependentUpon>GerenciaCadfilmes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="GerenciaCadlivros.aspx.designer.vb">
+      <DependentUpon>GerenciaCadlivros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GerenciaCadlivros.aspx.vb">
+      <DependentUpon>GerenciaCadlivros.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="GerenciaCadseries.aspx.designer.vb">
+      <DependentUpon>GerenciaCadseries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GerenciaCadseries.aspx.vb">
+      <DependentUpon>GerenciaCadseries.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="HomePage.aspx.designer.vb">
