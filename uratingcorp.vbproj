@@ -129,7 +129,6 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="Avaliacaofilmes.aspx" />
     <Content Include="Avaliacaolivros.aspx" />
     <Content Include="AvaliacaoSeries.aspx" />
@@ -330,7 +329,7 @@
     <Content Include="Content\v4-shims.min.css" />
     <Content Include="filme.png" />
     <Content Include="fundo.jpg" />
-    <Content Include="GerenciarAvaliações.aspx" />
+    <Content Include="GerenciarAvaliacoes.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="landingPage.aspx" />
     <Content Include="rating.png" />
@@ -584,13 +583,6 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
-    <Compile Include="About.aspx.designer.vb">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="About.aspx.vb">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
     <Compile Include="Avaliacaofilmes.aspx.designer.vb">
       <DependentUpon>Avaliacaofilmes.aspx</DependentUpon>
     </Compile>
@@ -640,11 +632,11 @@
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="GerenciarAvaliações.aspx.designer.vb">
-      <DependentUpon>GerenciarAvaliações.aspx</DependentUpon>
+    <Compile Include="GerenciarAvaliacoes.aspx.designer.vb">
+      <DependentUpon>GerenciarAvaliacoes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GerenciarAvaliações.aspx.vb">
-      <DependentUpon>GerenciarAvaliações.aspx</DependentUpon>
+    <Compile Include="GerenciarAvaliacoes.aspx.vb">
+      <DependentUpon>GerenciarAvaliacoes.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="HomePage.aspx.designer.vb">

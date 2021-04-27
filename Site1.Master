@@ -75,6 +75,15 @@
                     <li><a class="dropdown-item" href="CadastroLivros.aspx">Livros</a></li>
                 </ul>
                 </li>
+                    <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" id="navbarDropdown4" role="button" data-toggle="dropdown"> Biblioteca
+                        </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="BiblioFilmes.aspx">Filmes</a></li>
+                    <li><a class="dropdown-item" href="BiblioSeries.aspx">Séries</a></li>
+                    <li><a class="dropdown-item" href="BiblioLivros.aspx">Livros</a></li>
+                </ul>
+                </li>
                 </ul>
 
                 <ul class="navbar-nav">

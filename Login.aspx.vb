@@ -32,16 +32,22 @@ Public Class _Login
             Dim command As SqlCommand = New SqlCommand(sql, conexao)
             adapter = New SqlDataAdapter(sql, conexao)
             Dim userData As New DataTable
+
             adapter.Fill(userData)
             If userData.Rows.Count > 0 Then
                 Dim isAdmin As Object = userData.Rows.Item(0).Item("isAdmin")
                 If isAdmin = True Then
-                    Session.Item("role") = "Admin"
+                    Dim admin As New FormsAuthenticationTicket("admin", False, 30)
+                    Dim hash As String = FormsAuthentication.Encrypt(admin)
+                    Dim cookie As New HttpCookie("admin", hash)
+                    Response.Cookies.Add(cookie)
                 ElseIf isAdmin = False Then
 
-                    Session.Item("role") = "user"
-                Else
-                    Session.Item("role") = "visitante"
+                    Dim user As New FormsAuthenticationTicket("user", False, 30)
+                    Dim hash As String = FormsAuthentication.Encrypt(user)
+                    Dim cookie As New HttpCookie("user", hash)
+                    Response.Cookies.Add(cookie)
+
                 End If
                 Session.Item("usuario") = username.Text
                 FormsAuthentication.RedirectFromLoginPage(username.Text, False)
@@ -62,7 +68,5 @@ Public Class _Login
 
     End Sub
 
-    Protected Sub username_TextChanged(sender As Object, e As EventArgs) Handles username.TextChanged
 
-    End Sub
 End Class
