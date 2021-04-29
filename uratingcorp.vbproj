@@ -132,6 +132,9 @@
     <Content Include="Avaliacaofilmes.aspx" />
     <Content Include="Avaliacaolivros.aspx" />
     <Content Include="AvaliacaoSeries.aspx" />
+    <Content Include="BiblioFIlmes.aspx" />
+    <Content Include="BiblioLivros.aspx" />
+    <Content Include="BiblioSeries.aspx" />
     <Content Include="books.png" />
     <Content Include="CadastroFilmes.aspx" />
     <Content Include="CadastroLivros.aspx" />
@@ -604,6 +607,27 @@
     </Compile>
     <Compile Include="AvaliacaoSeries.aspx.vb">
       <DependentUpon>AvaliacaoSeries.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BiblioFIlmes.aspx.designer.vb">
+      <DependentUpon>BiblioFIlmes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BiblioFIlmes.aspx.vb">
+      <DependentUpon>BiblioFIlmes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BiblioLivros.aspx.designer.vb">
+      <DependentUpon>BiblioLivros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BiblioLivros.aspx.vb">
+      <DependentUpon>BiblioLivros.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BiblioSeries.aspx.designer.vb">
+      <DependentUpon>BiblioSeries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BiblioSeries.aspx.vb">
+      <DependentUpon>BiblioSeries.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="CadastroFilmes.aspx.designer.vb">
