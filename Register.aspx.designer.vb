@@ -14,6 +14,24 @@ Option Explicit On
 Partial Public Class _Register
 
     '''<summary>
+    '''Controle imagembase64.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents imagembase64 As Global.System.Web.UI.WebControls.HiddenField
+
+    '''<summary>
+    '''Controle FileUpload1.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents FileUpload1 As Global.System.Web.UI.WebControls.FileUpload
+
+    '''<summary>
     '''Controle usuario.
     '''</summary>
     '''<remarks>

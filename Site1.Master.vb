@@ -39,4 +39,9 @@
         Session.Abandon()
         Response.Redirect("Login.aspx")
     End Sub
+
+    Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles btnbuscar.Click
+        Session("busca") = buscar.Value
+        Response.Redirect("busca.aspx")
+    End Sub
 End Class

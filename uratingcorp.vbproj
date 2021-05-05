@@ -136,6 +136,7 @@
     <Content Include="BiblioLivros.aspx" />
     <Content Include="BiblioSeries.aspx" />
     <Content Include="books.png" />
+    <Content Include="busca.aspx" />
     <Content Include="CadastroFilmes.aspx" />
     <Content Include="CadastroLivros.aspx" />
     <Content Include="CadastroSeries.aspx" />
@@ -337,6 +338,8 @@
     <Content Include="GerenciaCadseries.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="landingPage.aspx" />
+    <Content Include="Content\login.css" />
+    <Content Include="Perfil.aspx" />
     <Content Include="rating.png" />
     <Content Include="Register.aspx" />
     <Content Include="Login.aspx" />
@@ -630,6 +633,13 @@
       <DependentUpon>BiblioSeries.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="busca.aspx.designer.vb">
+      <DependentUpon>busca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="busca.aspx.vb">
+      <DependentUpon>busca.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="CadastroFilmes.aspx.designer.vb">
       <DependentUpon>CadastroFilmes.aspx</DependentUpon>
     </Compile>
@@ -692,6 +702,13 @@
     <Compile Include="landingPage.aspx.vb">
       <DependentUpon>landingPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Perfil.aspx.designer.vb">
+      <DependentUpon>Perfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil.aspx.vb">
+      <DependentUpon>Perfil.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Register.aspx.designer.vb">
       <DependentUpon>Register.aspx</DependentUpon>

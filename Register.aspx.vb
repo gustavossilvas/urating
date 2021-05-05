@@ -25,7 +25,7 @@ Public Class _Register
                 Response.Write("<script language=""javascript"">alert('As senhas não coincidem!');</script>")
             Else
 
-                Dim insert = New SqlCommand("insert into usuarios(usuario,nome,senha,dt_nasc,cidade,uf) values('" + usuario.Text + "','" + nome.Text + "','" + senha.Text + "','" + dataNasc.Text + "','" + cidade.Text + "','" + uf.Text + "')", conexao)
+                Dim insert = New SqlCommand("insert into usuarios(usuario,nome,senha,dt_nasc,cidade,uf,foto) values('" + usuario.Text + "','" + nome.Text + "','" + senha.Text + "','" + dataNasc.Text + "','" + cidade.Text + "','" + uf.Text + "','" + imagembase64.Value + "')", conexao)
 
                 Dim sql As String = String.Empty
                 sql = "select usuario from usuarios where usuario = '" + usuario.Text + "'"

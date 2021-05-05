@@ -6,6 +6,40 @@
             height: 32px;
         }
     </style>
+    <script type="text/javascript">
+
+       function readURL(input) {
+           if (input.files && input.files[0]) {
+               var reader = new FileReader();
+               var k=0
+               reader.onload = function (e) {
+                   $('#imgview').attr('src', e.target.result);
+               };
+               
+               reader.readAsDataURL(input.files[0]);
+               while (k < 1) {
+                   k= k + 1;
+               }
+               if (k == 1) {
+               var img = document.getElementById('imgview');
+               img.crossOrigin = 'Anonymous';
+                   img.onload = function () {
+                       var canvas = document.createElement('canvas');
+                       var ctx = canvas.getContext('2d');
+                       canvas.height = this.naturalHeight;
+                       canvas.width = this.naturalWidth;
+                       ctx.drawImage(this, 0, 0);
+                       var data = canvas.toDataURL('image/jpeg');
+                       $('#<%= imagembase64.ClientID %>').val(data);
+                   }
+               }
+           }
+
+       }
+
+
+
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <div class="container">
@@ -25,10 +59,16 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <img width="85px" src="user.png"/>
-                            <p>
+                           <img id="imgview" width="85px" src="user.png"/><br />
+                            <asp:HiddenField ID="imagembase64" runat="server" />
+&nbsp;<p>
+
+                                <asp:FileUpload  onchange="readURL(this);" ID="FileUpload1" runat="server" />
 
                             </p>
+                            <p>
+
+                                &nbsp;</p>
                         </center>
                      </div>
                   </div>
