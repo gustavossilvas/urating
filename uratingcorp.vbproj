@@ -450,6 +450,7 @@
     <Content Include="Content\DataTables\css\semanticui.scss" />
     <Content Include="Content\DataTables\css\mixins.scss" />
     <Content Include="Content\DataTables\css\common.scss" />
+    <Content Include="solicitacaoAmizade.aspx" />
     <None Include="My Project\PublishProfiles\urating - Web Deploy.pubxml" />
     <Content Include="logoMack.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -801,6 +802,13 @@
     <Compile Include="UserControl.aspx.vb">
       <DependentUpon>UserControl.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="solicitacaoAmizade.aspx.designer.vb">
+      <DependentUpon>solicitacaoAmizade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="solicitacaoAmizade.aspx.vb">
+      <DependentUpon>solicitacaoAmizade.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -35,6 +35,7 @@ Public Class busca
             'FAZENDO O SELECT PARA VERIFICAR SE JA MANDOU O PEDIDO DE AMIZADE'
 
             Dim sql As String = String.Empty
+
             sql = "select * from rel_amizade where usuario_envio = '" + Session("usuario").ToString() + "' and usuario_recebimento = '" + e.CommandArgument.ToString() + "'"
 
             Dim dt As New DataTable
@@ -45,10 +46,14 @@ Public Class busca
             adapter.Fill(userData)
 
             If userData.Rows.Count > 0 Then
-                Response.Write("<script language=""javascript"">alert('Você já enviou uma solicitação de amizade para este amigo! Aguarde uma resposta!');</script>")
-
+                Dim isfriend As Object = userData.Rows.Item(0).Item("status")
+                If isfriend = 1 Then
+                    Response.Write("<script language=""javascript"">alert('Vocês já são amigos! ');</script>")
+                ElseIf isfriend = 0 Then
+                    Response.Write("<script language=""javascript"">alert('Você já enviou uma solicitação de amizade para este amigo! Aguarde uma resposta!');</script>")
+                End If
             Else
-                Dim insert = New SqlCommand("insert into rel_amizade(usuario_envio,usuario_recebimento) values('" + Session("usuario").ToString() + "','" + e.CommandArgument.ToString() + "')", conexao)
+                Dim insert = New SqlCommand("insert into rel_amizade(usuario_envio,usuario_recebimento,img_envio) values('" + Session("usuario").ToString() + "','" + e.CommandArgument.ToString() + "','" + Session("foto").ToString() + "')", conexao)
                 insert.ExecuteNonQuery()
                 Response.Write("<script language=""javascript"">alert('Solicitação enviada');</script>")
             End If

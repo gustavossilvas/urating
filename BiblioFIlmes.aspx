@@ -93,7 +93,7 @@
                                                             
                                                             Descrição -
                                                                                                                         
-                                                            <asp:Label ID="descricao" runat="server" Text='<%# Eval("descricao") %>' Font-Bold="True" Font-Italic="True" Font-Size="Small"></asp:Label>
+                                                            <asp:Label ID="descricao" runat="server" Text='<%# Eval("descricao") %>' Font-Bold="True" Font-Italic="True" Font-Size="Small" ></asp:Label>
                                                                                                                         
                                                         </div>
                                                     </div>

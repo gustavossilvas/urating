@@ -94,7 +94,7 @@
                 </ul>
 
                 <ul class="navbar-nav">
-                    <asp:LinkButton class="btn btn-light mr-1" ID="LinkButton2" runat="server"><i class="fas fa-user-friends"></i></asp:LinkButton>
+                    <asp:LinkButton class="btn btn-light mr-1" ID="LinkButton2" runat="server" href="solicitacaoAmizade.aspx"><i class="fas fa-user-friends"></i></asp:LinkButton>
                     <asp:Label ID="solicitacoes" runat="server" ForeColor="White" Text="(0)"></asp:Label>
                     <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle" id="gerenciaravaliacoes" runat="server" role="button" data-toggle="dropdown"> Gerenciamento de Cadastros

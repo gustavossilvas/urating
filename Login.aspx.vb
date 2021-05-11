@@ -52,8 +52,9 @@ Public Class _Login
                     Response.Cookies.Add(cookie)
 
                 End If
+                Dim picture As Object = userData.Rows.Item(0).Item("foto")
                 Session.Item("usuario") = username.Text
-
+                Session.Item("foto") = picture
                 FormsAuthentication.RedirectFromLoginPage(username.Text, False)
 
 
