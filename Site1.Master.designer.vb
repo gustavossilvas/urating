@@ -50,6 +50,24 @@ Partial Public Class Site1
     Protected WithEvents btnbuscar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''Controle LinkButton2.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents LinkButton2 As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''Controle solicitacoes.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents solicitacoes As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Controle gerenciaravaliacoes.
     '''</summary>
     '''<remarks>

@@ -15,6 +15,10 @@ Public Class busca
     Dim cmd As New SqlCommand
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
+
+
+
+
     End Sub
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs)
@@ -27,12 +31,41 @@ Public Class busca
             Session("verperfil") = e.CommandArgument.ToString()
             Response.Redirect("Perfil.aspx")
         ElseIf (e.CommandName = "add") Then
-            Response.Write("<script language=""javascript"">alert('Solicitação enviada');</script>")
-        Else
-            Response.Write("<script language=""javascript"">alert('Burro');</script>")
+            conexao.Open()
+            'FAZENDO O SELECT PARA VERIFICAR SE JA MANDOU O PEDIDO DE AMIZADE'
+
+            Dim sql As String = String.Empty
+            sql = "select * from rel_amizade where usuario_envio = '" + Session("usuario").ToString() + "' and usuario_recebimento = '" + e.CommandArgument.ToString() + "'"
+
+            Dim dt As New DataTable
+            Dim adapter As New SqlDataAdapter
+            Dim command As SqlCommand = New SqlCommand(sql, conexao)
+            adapter = New SqlDataAdapter(sql, conexao)
+            Dim userData As New DataTable
+            adapter.Fill(userData)
+
+            If userData.Rows.Count > 0 Then
+                Response.Write("<script language=""javascript"">alert('Você já enviou uma solicitação de amizade para este amigo! Aguarde uma resposta!');</script>")
+
+            Else
+                Dim insert = New SqlCommand("insert into rel_amizade(usuario_envio,usuario_recebimento) values('" + Session("usuario").ToString() + "','" + e.CommandArgument.ToString() + "')", conexao)
+                insert.ExecuteNonQuery()
+                Response.Write("<script language=""javascript"">alert('Solicitação enviada');</script>")
+            End If
+            'INSERINDO PEDIDO DE AMIZADE'
+
+
+            conexao.Close()
+
+        ElseIf (e.CommandName = "delete") Then
+            Dim delete = New SqlCommand("delete from rel_amizade where usuario_envio = '" + Session("usuario").ToString() + "' and usuario_recebimento = '" + e.CommandArgument.ToString() + "'")
+            delete.ExecuteNonQuery()
+
         End If
 
 
 
     End Sub
+
+
 End Class

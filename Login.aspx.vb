@@ -3,6 +3,7 @@ Imports System.Web.Security
 
 
 
+
 Public Class _Login
     Inherits Page
 
@@ -41,6 +42,7 @@ Public Class _Login
                     Dim admin As New FormsAuthenticationTicket("admin", False, 30)
                     Dim hash As String = FormsAuthentication.Encrypt(admin)
                     Dim cookie As New HttpCookie("admin", hash)
+
                     Response.Cookies.Add(cookie)
                 ElseIf isAdmin = False Then
 
@@ -51,6 +53,7 @@ Public Class _Login
 
                 End If
                 Session.Item("usuario") = username.Text
+
                 FormsAuthentication.RedirectFromLoginPage(username.Text, False)
 
 

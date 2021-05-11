@@ -4,12 +4,15 @@
         .auto-style2 {
             width: 385px;
         }
+        .auto-style3 {
+            margin-right: 0px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+        <
 
-
-    <asp:DataList ID="DlistUser" runat="server" DataSourceID="urating" Width="1352px">
+    <asp:DataList ID="DlistUser" runat="server" DataSourceID="urating" Width="580px" CssClass="auto-style3">
         <ItemTemplate>
             <table>
                 <tr>
@@ -25,8 +28,9 @@
                 <tr>
                     <td style="text-align: right" class="auto-style2">
 
-                        <asp:Button ID="Button2" runat="server" CommandName="add" Text="+ Amigo" Width="88px" CommandArgument='<%# Eval("usuario") %>' />
-                        <asp:Button ID="Button1" runat="server" CommandName="perfil" Height="32px" OnClick="Button1_Click" Text="Ver Perfil" Width="85px" CommandArgument='<%# Eval("usuario") %>' />
+                        <asp:Button ID="adicionar" runat="server" CommandName="add" Text="+ Amigo" Width="88px" CommandArgument='<%# Eval("usuario") %>' />
+                        <asp:Button ID="verperfil" runat="server" CommandName="perfil" Height="32px" OnClick="Button1_Click" Text="Ver Perfil" Width="85px" CommandArgument='<%# Eval("usuario") %>' />
+                        
 
                     </td>
                 </tr>
@@ -42,4 +46,4 @@
     </asp:SqlDataSource>
 
 
-</asp:Content>
+        </asp:Content>
