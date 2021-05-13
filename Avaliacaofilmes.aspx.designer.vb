@@ -65,7 +65,7 @@ Partial Public Class Avaliacaofilmes
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents genero As Global.System.Web.UI.WebControls.ListBox
+    Protected WithEvents genero As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Controle parte.

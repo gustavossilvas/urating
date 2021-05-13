@@ -60,40 +60,13 @@
                         </div>
                         <label>Data de Lançamento</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="dtlanc" runat="server" placeholder="Data de Lançamento" TextMode="Date" ReadOnly="true"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="dtlanc" runat="server" placeholder="Data de Lançamento" ReadOnly="true"></asp:TextBox>
                         </div>
                      </div>
                      <div class="col-md-4">
                         <label>Gênero</label>
-                        <div class="form-group">
-                           <asp:ListBox CssClass="form-control" ID="genero" runat="server" SelectionMode="Multiple" Rows="5" ReadOnly="true">
-                              <asp:ListItem Text="Ação" Value="Ação" />
-                              <asp:ListItem Text="Aventura" Value="Aventura" />
-                              <asp:ListItem Text="Gibi" Value="Gibi" />
-                              <asp:ListItem Text="Auto-Ajuda" Value="Auto-Ajudp" />
-                              <asp:ListItem Text="Motivação" Value="Motivação" />
-                              <asp:ListItem Text="Vida Saudável" Value="Vida Saudável" />
-                              <asp:ListItem Text="Bem Estar" Value="Bem Estar" />
-                              <asp:ListItem Text="Crime" Value="Crime" />
-                              <asp:ListItem Text="Drama" Value="Drama" />
-                              <asp:ListItem Text="Fantasia" Value="Fantasia" />
-                              <asp:ListItem Text="Horror" Value="Horror" />
-                              <asp:ListItem Text="Poesia" Value="Poesia" />
-                              <asp:ListItem Text="Desenvolvimento Pessoal" Value="Desenvolvimento Pessoal" />
-                              <asp:ListItem Text="Romance" Value="Romance" />
-                              <asp:ListItem Text="Ficção Científica" Value="Ficção Científica" />
-                              <asp:ListItem Text="Suspense" Value="Suspense" />
-                              <asp:ListItem Text="Arte" Value="Arte" />
-                              <asp:ListItem Text="Autobiografia" Value="Autobiografia" />
-                              <asp:ListItem Text="Enciclopédia" Value="Enciclopédia" />
-                              <asp:ListItem Text="Saúde" Value="Saúde" />
-                              <asp:ListItem Text="História" Value="História" />
-                              <asp:ListItem Text="Matemática" Value="Matemática" />
-                              <asp:ListItem Text="Didático" Value="Didático" />
-                              <asp:ListItem Text="Ciência" Value="Ciência" />
-                              <asp:ListItem Text="Viagem" Value="Viagem" />
-                               <asp:ListItem Text="Outros" Value="Outros" />
-                           </asp:ListBox>
+                          <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="genero" runat="server" placeholder="Gênero" ReadOnly="true"></asp:TextBox>
                         </div>
                      </div>
                   </div>
@@ -121,7 +94,7 @@
                      <div class="col-12">
                         <label>Avaliação</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="avaliacao" runat="server" placeholder="Faça um breve resumo da sua opinião sobre o filme" TextMode="MultiLine" Rows="5"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="avaliacao" runat="server" placeholder="Faça um breve resumo da sua opinião sobre o filme em até 1024 caracteres" TextMode="MultiLine" Rows="5" MaxLength="1024"></asp:TextBox>
                         </div>
                      </div>
                   </div>
@@ -160,7 +133,7 @@
                      </div>
                   </div>
                   <div class="row">
-                      <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:friendflixDBConnectionString %>" SelectCommand="SELECT * FROM [filmes] ORDER BY [id_filme]"></asp:SqlDataSource>
+                      <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:friendflixDBConnectionString %>" SelectCommand="SELECT * FROM [filmes]"></asp:SqlDataSource>
                      <div class="col">
                         <asp:GridView class="table table-striped table-bordered" ID="tabelafilmes" ReadOnly="False" runat="server" AutoGenerateColumns="False" DataKeyNames="id_filme" DataSourceID="SqlDataSource1">
                             <Columns>

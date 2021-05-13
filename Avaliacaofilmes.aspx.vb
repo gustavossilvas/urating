@@ -51,7 +51,57 @@ Public Class Avaliacaofilmes
         dtlanc.Text = lancamaento.ToString()
         parte.Text = partee
         tempo.Text = tempoo.ToString()
-        genero.SelectedValue = generoo.ToString()
+        genero.Text = generoo.ToString()
+        conexao.Close()
+    End Sub
 
+    Protected Sub adicionar_Click(sender As Object, e As EventArgs) Handles adicionar.Click
+        conexao.Open()
+        Dim sql2 As String = String.Empty
+        sql2 = "select * from filmes where nome_filme = '" + nomefilme.Text + "'"
+
+        Dim dt2 As New DataTable
+        Dim adapter2 As New SqlDataAdapter
+        Dim command2 As SqlCommand = New SqlCommand(sql2, conexao)
+        adapter2 = New SqlDataAdapter(sql2, conexao)
+        Dim userData2 As New DataTable
+        adapter2.Fill(userData2)
+        If userData2.Rows.Count > 0 Then
+            If avaliacao.Text = "" Or nota.Text = "" Then
+                Response.Write("<script language=""javascript"">alert('Nota e/ou Avaliação em branco! Por favor preencha!');</script>")
+            Else
+                Dim sql As String = String.Empty
+
+                sql = "select * from avaliacao_filmes where nome_filme = '" + nomefilme.Text + "' and usuario='" + Session("usuario") + "'"
+
+                Dim dt As New DataTable
+                Dim adapter As New SqlDataAdapter
+                Dim command As SqlCommand = New SqlCommand(sql, conexao)
+                adapter = New SqlDataAdapter(sql, conexao)
+                Dim userData As New DataTable
+                adapter.Fill(userData)
+                If userData.Rows.Count > 0 Then
+                    Response.Write("<script language=""javascript"">alert('Você já realizou uma avaliação para este filme! Por favor escolha outro!');</script>")
+                Else
+                    Dim insert = New SqlCommand("insert into avaliacao_filmes(usuario,nome_filme,nota,avaliacao) values('" + Session("usuario").ToString() + "','" + nomefilme.Text + "','" + nota.Text + "','" + avaliacao.Text + "')", conexao)
+                    insert.ExecuteNonQuery()
+                    Response.Write("<script language=""javascript"">alert('Avaliação cadastrada!');</script>")
+
+                End If
+                nomefilme.Text = ""
+                idioma.Text = ""
+                diretor.Text = ""
+                produtora.Text = ""
+                dtlanc.Text = ""
+                parte.Text = ""
+                tempo.Text = ""
+                genero.Text = ""
+                nota.Text = ""
+                avaliacao.Text = ""
+                conexao.Close()
+            End If
+        Else
+            Response.Write("<script language=""javascript"">alert('Nome do filme em branco! Por favor escolha um filme!');</script>")
+        End If
     End Sub
 End Class
