@@ -14,85 +14,94 @@ Option Explicit On
 Partial Public Class WebForm1
 
     '''<summary>
-    '''Controle Label1.
+    '''Controle foto.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents foto As Global.System.Web.UI.WebControls.Image
 
     '''<summary>
-    '''Controle TextBox1.
+    '''Controle status.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents status As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Controle TextBox2.
+    '''Controle nome.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents TextBox2 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents nome As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Controle TextBox4.
+    '''Controle dtnasc.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents TextBox4 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents dtnasc As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Controle DropDownList1.
+    '''Controle username.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents DropDownList1 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents username As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Controle TextBox6.
+    '''Controle uf.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents TextBox6 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents uf As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Controle TextBox8.
+    '''Controle cidade.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents TextBox8 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents cidade As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Controle TextBox9.
+    '''Controle username2.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents TextBox9 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents username2 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Controle TextBox10.
+    '''Controle oldpass.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents TextBox10 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents oldpass As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Controle newpass.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents newpass As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Controle Button1.
@@ -102,49 +111,4 @@ Partial Public Class WebForm1
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
     Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Controle Label2.
-    '''</summary>
-    '''<remarks>
-    '''Campo gerado automaticamente.
-    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-    '''</remarks>
-    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Controle livros.
-    '''</summary>
-    '''<remarks>
-    '''Campo gerado automaticamente.
-    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-    '''</remarks>
-    Protected WithEvents livros As Global.System.Web.UI.WebControls.RadioButton
-
-    '''<summary>
-    '''Controle series.
-    '''</summary>
-    '''<remarks>
-    '''Campo gerado automaticamente.
-    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-    '''</remarks>
-    Protected WithEvents series As Global.System.Web.UI.WebControls.RadioButton
-
-    '''<summary>
-    '''Controle filmes.
-    '''</summary>
-    '''<remarks>
-    '''Campo gerado automaticamente.
-    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-    '''</remarks>
-    Protected WithEvents filmes As Global.System.Web.UI.WebControls.RadioButton
-
-    '''<summary>
-    '''Controle GridView1.
-    '''</summary>
-    '''<remarks>
-    '''Campo gerado automaticamente.
-    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-    '''</remarks>
-    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
 End Class
