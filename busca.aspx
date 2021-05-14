@@ -10,7 +10,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-        <
+        
 
     <asp:DataList ID="DlistUser" runat="server" DataSourceID="urating" Width="580px" CssClass="auto-style3">
         <ItemTemplate>

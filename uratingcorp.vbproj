@@ -129,6 +129,7 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Amigos.aspx" />
     <Content Include="Avaliacaofilmes.aspx" />
     <Content Include="Avaliacaolivros.aspx" />
     <Content Include="AvaliacaoSeries.aspx" />
@@ -590,6 +591,13 @@
     <Content Include="webfonts\fa-brands-400.eot" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Amigos.aspx.designer.vb">
+      <DependentUpon>Amigos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Amigos.aspx.vb">
+      <DependentUpon>Amigos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="Avaliacaofilmes.aspx.designer.vb">

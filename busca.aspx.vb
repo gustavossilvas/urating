@@ -53,7 +53,19 @@ Public Class busca
                     Response.Write("<script language=""javascript"">alert('Você já enviou uma solicitação de amizade para este amigo! Aguarde uma resposta!');</script>")
                 End If
             Else
-                Dim insert = New SqlCommand("insert into rel_amizade(usuario_envio,usuario_recebimento,img_envio) values('" + Session("usuario").ToString() + "','" + e.CommandArgument.ToString() + "','" + Session("foto").ToString() + "')", conexao)
+                Dim sql2 As String = String.Empty
+
+                sql2 = "select * from usuarios where usuario = '" + e.CommandArgument.ToString() + "'"
+
+                Dim dt2 As New DataTable
+                Dim adapter2 As New SqlDataAdapter
+                Dim command2 As SqlCommand = New SqlCommand(sql2, conexao)
+                adapter2 = New SqlDataAdapter(sql2, conexao)
+                Dim userData2 As New DataTable
+                adapter2.Fill(userData2)
+                Dim fotoo As Object = userData2.Rows.Item(0).Item("foto")
+
+                Dim insert = New SqlCommand("insert into rel_amizade(usuario_envio,usuario_recebimento,img_envio,img_recebimento) values('" + Session("usuario").ToString() + "','" + e.CommandArgument.ToString() + "','" + Session("foto").ToString() + "','" + fotoo.ToString() + "')", conexao)
                 insert.ExecuteNonQuery()
                 Response.Write("<script language=""javascript"">alert('Solicitação enviada');</script>")
             End If
