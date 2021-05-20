@@ -68,7 +68,8 @@ Public Class Avaliacaofilmes
         adapter2.Fill(userData2)
         If userData2.Rows.Count > 0 Then
             If avaliacao.Text = "" Or nota.Text = "" Then
-                Response.Write("<script language=""javascript"">alert('Nota e/ou Avaliação em branco! Por favor preencha!');</script>")
+                MsgBox("Nota e/ou Avaliação em branco! Por favor preencha!", MsgBoxStyle.Critical, "<< Ocorreu um erro! Detalhes: >>")
+
             Else
                 Dim sql As String = String.Empty
 
@@ -81,11 +82,12 @@ Public Class Avaliacaofilmes
                 Dim userData As New DataTable
                 adapter.Fill(userData)
                 If userData.Rows.Count > 0 Then
-                    Response.Write("<script language=""javascript"">alert('Você já realizou uma avaliação para este filme! Por favor escolha outro!');</script>")
+                    MsgBox("Você já realizou uma avaliação para este filme! Por favor escolha outro!", MsgBoxStyle.Critical, "<< Ocorreu um erro! Detalhes: >>")
+
                 Else
                     Dim insert = New SqlCommand("insert into avaliacao_filmes(usuario,nome_filme,nota,avaliacao) values('" + Session("usuario").ToString() + "','" + nomefilme.Text + "','" + nota.Text + "','" + avaliacao.Text + "')", conexao)
                     insert.ExecuteNonQuery()
-                    Response.Write("<script language=""javascript"">alert('Avaliação cadastrada!');</script>")
+                    MsgBox("Avaliação Cadastrada!", MsgBoxStyle.Information, "<< Aviso! >>")
 
                 End If
                 nomefilme.Text = ""
@@ -101,7 +103,8 @@ Public Class Avaliacaofilmes
                 conexao.Close()
             End If
         Else
-            Response.Write("<script language=""javascript"">alert('Nome do filme em branco! Por favor escolha um filme!');</script>")
+            MsgBox("Nome do filme em branco! Por favor escolha um filme!", MsgBoxStyle.Critical, "<< Ocorreu um erro! Detalhes: >>")
+
         End If
     End Sub
 End Class

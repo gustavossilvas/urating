@@ -74,9 +74,7 @@ Public Class busca
 
             conexao.Close()
 
-        ElseIf (e.CommandName = "delete") Then
-            Dim delete = New SqlCommand("delete from rel_amizade where usuario_envio = '" + Session("usuario").ToString() + "' and usuario_recebimento = '" + e.CommandArgument.ToString() + "'")
-            delete.ExecuteNonQuery()
+
 
         End If
 

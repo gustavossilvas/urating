@@ -340,6 +340,9 @@
     <Content Include="HomePage.aspx" />
     <Content Include="landingPage.aspx" />
     <Content Include="Content\login.css" />
+    <Content Include="Pagfilme.aspx" />
+    <Content Include="Paglivro.aspx" />
+    <Content Include="Pagserie.aspx" />
     <Content Include="Perfil.aspx" />
     <Content Include="rating.png" />
     <Content Include="Register.aspx" />
@@ -353,8 +356,6 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Profile.aspx" />
-    <Content Include="MovieRating.aspx" />
-    <Content Include="BookRating.aspx" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap4.js" />
@@ -446,7 +447,6 @@
     <Content Include="Scripts\fontawesome\v4-shims.js" />
     <Content Include="Scripts\fontawesome\v4-shims.min.js" />
     <Content Include="serie.png" />
-    <Content Include="SeriesRating.aspx" />
     <Content Include="UserControl.aspx" />
     <Content Include="Content\DataTables\css\semanticui.scss" />
     <Content Include="Content\DataTables\css\mixins.scss" />
@@ -633,7 +633,7 @@
     </Compile>
     <Compile Include="BiblioLivros.aspx.vb">
       <DependentUpon>BiblioLivros.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BiblioSeries.aspx.designer.vb">
       <DependentUpon>BiblioSeries.aspx</DependentUpon>
@@ -712,6 +712,27 @@
       <DependentUpon>landingPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Pagfilme.aspx.designer.vb">
+      <DependentUpon>Pagfilme.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagfilme.aspx.vb">
+      <DependentUpon>Pagfilme.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paglivro.aspx.designer.vb">
+      <DependentUpon>Paglivro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paglivro.aspx.vb">
+      <DependentUpon>Paglivro.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pagserie.aspx.designer.vb">
+      <DependentUpon>Pagserie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagserie.aspx.vb">
+      <DependentUpon>Pagserie.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Perfil.aspx.designer.vb">
       <DependentUpon>Perfil.aspx</DependentUpon>
     </Compile>
@@ -781,27 +802,6 @@
     </Compile>
     <Compile Include="Profile.aspx.vb">
       <DependentUpon>Profile.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="MovieRating.aspx.designer.vb">
-      <DependentUpon>MovieRating.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="MovieRating.aspx.vb">
-      <DependentUpon>MovieRating.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="BookRating.aspx.designer.vb">
-      <DependentUpon>BookRating.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="BookRating.aspx.vb">
-      <DependentUpon>BookRating.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="SeriesRating.aspx.designer.vb">
-      <DependentUpon>SeriesRating.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SeriesRating.aspx.vb">
-      <DependentUpon>SeriesRating.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="UserControl.aspx.designer.vb">

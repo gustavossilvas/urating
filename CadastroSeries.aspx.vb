@@ -29,9 +29,17 @@ Public Class CadastroSeries
             Dim userData As New DataTable
             adapter.Fill(userData)
 
+            Dim sqlselect2 As String = String.Empty
+            sqlselect2 = "select * from filaseries where nome_serie = '" + nomeserie.Text + "'"
+            Dim dt2 As New DataTable
+            Dim adapter2 As New SqlDataAdapter
+            Dim command2 As SqlCommand = New SqlCommand(sqlselect2, conexao)
+            adapter2 = New SqlDataAdapter(sqlselect2, conexao)
+            Dim userData2 As New DataTable
+            adapter2.Fill(userData2)
 
             If userData.Rows.Count > 0 Then
-                Response.Write("<script language=""javascript"">window.alert('Esta Série já esta cadastrado em nosso sistema!');</script>")
+                Response.Write("<script language=""javascript"">window.alert('Esta Série já esta cadastrada em nosso sistema!');</script>")
                 nomeserie.Text = ""
                 idioma.Text = ""
                 diretornome.Text = ""
@@ -40,43 +48,55 @@ Public Class CadastroSeries
                 tempep.Text = ""
                 temporada.Text = ""
                 descricao.Text = ""
-
             Else
-                Dim gender = ""
-                For Each i As Integer In genero.GetSelectedIndices
-                    gender = gender & genero.Items(i).ToString & ","
+                If userData2.Rows.Count > 0 Then
+                    Response.Write("<script language=""javascript"">window.alert('Esta Série já esta na fila de espera! Por favor aguarde a aprovação do Admin!');</script>")
+                    nomeserie.Text = ""
+                    idioma.Text = ""
+                    diretornome.Text = ""
+                    plataformanome.Text = ""
+                    dtlancamento.Text = ""
+                    tempep.Text = ""
+                    temporada.Text = ""
+                    descricao.Text = ""
+                Else
+                    Dim gender = ""
+                    For Each i As Integer In genero.GetSelectedIndices
+                        gender = gender & genero.Items(i).ToString & ","
 
-                Next
-                gender = gender.Remove(gender.Length - 1)
-                conexao.Open()
-                cmd = conexao.CreateCommand()
-                cmd.CommandType = CommandType.Text
-                cmd.CommandText = "INSERT INTO [dbo].[series]
-           ([nome_serie]
-           ,[idioma]
-           ,[nome_diretor]
-           ,[nome_plataforma]
-           ,[data_lancamento]
-           ,[temporada]
-           ,[tempo]
-           ,[link_capa]
-           ,[genero]
-           ,[descricao])
-     VALUES('" + nomeserie.Text + "','" + idioma.SelectedItem.Value + "','" + diretornome.Text + "','" + plataformanome.Text + "','" + dtlancamento.Text + "','" + temporada.Text + "','" + tempep.Text + "','" + imagembase64.Value + "','" + gender.ToString + "','" + descricao.Text + "')"
-                cmd.ExecuteNonQuery()
+                    Next
+                    gender = gender.Remove(gender.Length - 1)
+                    conexao.Open()
+                    cmd = conexao.CreateCommand()
+                    cmd.CommandType = CommandType.Text
+                    cmd.CommandText = "INSERT INTO [dbo].[filaseries]
+                        ([nome_serie]
+                        ,[idioma]
+                        ,[nome_diretor]
+                        ,[nome_plataforma]
+                       ,[data_lancamento]
+                       ,[temporada]
+                       ,[tempo]
+                       ,[link_capa]
+                       ,[genero]
+                       ,[descricao])
+                        VALUES('" + nomeserie.Text + "','" + idioma.SelectedItem.Value + "','" + diretornome.Text + "','" + plataformanome.Text + "','" + dtlancamento.Text + "','" + temporada.Text + "','" + tempep.Text + "','" + imagembase64.Value + "','" + gender.ToString + "','" + descricao.Text + "')"
+                    cmd.ExecuteNonQuery()
 
-                Response.Write("<script language=""javascript"">window.alert('Série inserida com sucesso!');</script>")
-                nomeserie.Text = ""
-                idioma.Text = ""
-                diretornome.Text = ""
-                plataformanome.Text = ""
-                dtlancamento.Text = ""
-                tempep.Text = ""
-                temporada.Text = ""
-                descricao.Text = ""
+                    Response.Write("<script language=""javascript"">window.alert('A Série foi inserida na fila de aprovações! Aguarde o Admin aprovar. Obrigado!');</script>")
+                    nomeserie.Text = ""
+                    idioma.Text = ""
+                    diretornome.Text = ""
+                    plataformanome.Text = ""
+                    dtlancamento.Text = ""
+                    tempep.Text = ""
+                    temporada.Text = ""
+                    descricao.Text = ""
 
-                conexao.Close()
+                    conexao.Close()
+                End If
             End If
+
         Else
             Response.Write("<script language=""javascript"">window.alert('Nome da Série em branco! Por favor preencha!');</script>")
 

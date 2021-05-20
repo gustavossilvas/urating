@@ -70,15 +70,7 @@
                     <li><a class="dropdown-item" href="Avaliacaolivros">Livros</a></li>
                 </ul>
                 </li>
-                <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" id="navbarDropdown2" role="button" data-toggle="dropdown"> Ver Avaliações
-                        </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="MovieRating.aspx">Filmes</a></li>
-                    <li><a class="dropdown-item" href="SeriesRating.aspx">Séries</a></li>
-                    <li><a class="dropdown-item" href="BookRating.aspx">Livros</a></li>
-                </ul>
-                </li>
+
                      <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle" id="navbarDropdown3" role="button" data-toggle="dropdown"> Cadastrar
                         </a>

@@ -33,7 +33,7 @@
                      </div>
                   </div>
                   <div class="row">
-                      <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:friendflixDBConnectionString %>" SelectCommand="SELECT * FROM [filmes] ORDER BY [id_filme]"></asp:SqlDataSource>
+                      <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:friendflixDBConnectionString %>" SelectCommand="SELECT * FROM [filmes]"></asp:SqlDataSource>
                      <div class="col">
                         <asp:GridView class="table table-striped table-bordered" ID="tabelafilmes" runat="server" AutoGenerateColumns="False" DataKeyNames="id_filme" DataSourceID="SqlDataSource1">
                             <Columns>
@@ -95,6 +95,14 @@
                                                                                                                         
                                                             <asp:Label ID="descricao" runat="server" Text='<%# Eval("descricao") %>' Font-Bold="True" Font-Italic="True" Font-Size="Small" ></asp:Label>
                                                                                                                         
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <br />
+                                                                          <center>                                  
+                                                            <asp:LinkButton ID="select" class="btn btn-lg btn-block btn-danger" runat="server" Text="Selecionar" Width="211px" CommandArgument='<%# Eval("nome_filme") %>' OnCommand ="selecionarfilme" />
+                                                                           </center>                                      
                                                         </div>
                                                     </div>
                                                 </div>
